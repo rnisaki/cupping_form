@@ -1,0 +1,16 @@
+<h1>Cuppings#new</h1>
+
+<%= form_for(@cupping) do |f| %>
+
+  <%= f.label :memo, "MEMO" %>
+  <%= f.text_field :memo %><br>
+
+   <%= f.label :process, "PROCESS" %>
+  <%= f.text_field :process %><br>
+
+  <%= f.label :shop, "SHOP" %>
+  <%= f.text_field :shop %><br>
+  <%= f.submit %>
+
+<% end %>
+

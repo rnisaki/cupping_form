@@ -10,7 +10,6 @@ class CreateCuppings < ActiveRecord::Migration[5.2]
       t.integer :balance
       t.integer :over_all
       t.text :flavor_coment
-      t.string :country
       t.string :origin
       t.string :process
       t.string :shop
@@ -24,6 +23,7 @@ class CreateCuppings < ActiveRecord::Migration[5.2]
       t.integer :balance_point
       t.integer :over_all_point
       t.integer :total_point
+      t.integer :country_id
 
       t.timestamps
     end

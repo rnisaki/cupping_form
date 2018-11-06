@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_01_070830) do
+ActiveRecord::Schema.define(version: 2018_11_01_073410) do
+
+  create_table "countries", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "cuppings", force: :cascade do |t|
     t.integer "crean_cup"
@@ -22,7 +28,6 @@ ActiveRecord::Schema.define(version: 2018_11_01_070830) do
     t.integer "balance"
     t.integer "over_all"
     t.text "flavor_coment"
-    t.string "country"
     t.string "origin"
     t.string "process"
     t.string "shop"
@@ -36,6 +41,7 @@ ActiveRecord::Schema.define(version: 2018_11_01_070830) do
     t.integer "balance_point"
     t.integer "over_all_point"
     t.integer "total_point"
+    t.integer "country_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
