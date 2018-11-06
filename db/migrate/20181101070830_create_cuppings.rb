@@ -23,7 +23,7 @@ class CreateCuppings < ActiveRecord::Migration[5.2]
       t.integer :balance_point
       t.integer :over_all_point
       t.integer :total_point
-      t.integer :country_id
+      t.integer :country_id 
 
       t.timestamps
     end
