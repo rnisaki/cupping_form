@@ -4,9 +4,7 @@ class CuppingsController < ApplicationController
   end
 
   def create
-  	puts "!!!!!"
-  	puts params
-  	puts "!!!!!!"
+  	
 
   	@cupping = Cupping.new(cupping_params)
   	if @cupping.save
@@ -18,9 +16,17 @@ class CuppingsController < ApplicationController
 
 
   def show
+    @cupping = Cupping.find(params[:id])
   end
 
   def edit
+    @cupping = Cupping.find(params[:id])
+  end
+
+  def update
+    @cupping = Cupping.find(params[:id])
+    @cupping.update(cupping_params)
+    redirect_to @cupping
   end
 
    private

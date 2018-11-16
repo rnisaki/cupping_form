@@ -1,2 +1,23 @@
 <h1>Cuppings#edit</h1>
-<p>Find me in app/views/cuppings/edit.html.erb</p>
+<%= form_for(@cupping) do |f| %>
+
+  <%= f.label :origin, "ORIGIN" %><br>
+  <%= f.text_field :origin %><br>
+
+  <%= f.label :process, "PROCESS" %><br>
+  <%= f.text_field :process %><br>
+
+  <%= f.label :shop, "SHOP" %><br>
+  <%= f.text_field :shop %><br>
+
+  <%= f.label :memo, "MEMO" %><br>
+  <%= f.text_field :memo %><br>
+
+
+
+
+  <br><%= f.label :flavor_coment, "COMENT" %><br>
+  <%= f.text_field :flavor_coment %><br>
+  <%= f.submit %>
+
+<% end %>
