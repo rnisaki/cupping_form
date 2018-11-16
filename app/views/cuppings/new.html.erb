@@ -2,14 +2,32 @@
 
 <%= form_for(@cupping) do |f| %>
 
-  <%= f.label :memo, "MEMO" %>
-  <%= f.text_field :memo %><br>
+  <%= f.label :origin, "ORIGIN" %><br>
+  <%= f.text_field :origin %><br>
 
-   <%= f.label :process, "PROCESS" %>
+  <%= f.label :process, "PROCESS" %><br>
   <%= f.text_field :process %><br>
 
-  <%= f.label :shop, "SHOP" %>
+  <%= f.label :shop, "SHOP" %><br>
   <%= f.text_field :shop %><br>
+
+  <%= f.label :memo, "MEMO" %><br>
+  <%= f.text_field :memo %><br>
+
+  <br><br>
+  <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+  <script>
+  var slider = new Slider('#ex1', {
+  formatter: function(value) {
+    return 'Current value: ' + value;
+  }
+  });
+  </script>
+
+
+
+  <br><%= f.label :flavor_coment, "COMENT" %><br>
+  <%= f.text_field :flavor_coment %><br>
   <%= f.submit %>
 
 <% end %>

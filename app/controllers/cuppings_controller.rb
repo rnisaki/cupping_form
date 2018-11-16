@@ -25,6 +25,6 @@ class CuppingsController < ApplicationController
 
    private
     def cupping_params
-      params.require(:cupping).permit(:memo, :process, :shop)
+      params.require(:cupping).permit(:memo, :process, :shop, :origin, :flavor_coment)
     end
 end
