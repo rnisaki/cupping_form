@@ -1,10 +1,12 @@
-<h1>Cuppings#show</h1>
+<h1>SAMPLE<%= @cupping.id %></h1>
 
-<%= @cupping.origin %><br>
-<%= @cupping.process %><br>
-<%= @cupping.shop %><br>
-<%= @cupping.memo %><br>
-<%= @cupping.flavor_coment %><br>
+<h3>
+  country / <%= @cupping.origin %><br>
+  <small class="text-muted"><%= @cupping.process %></small><br>
+  <small class="text-muted"><%= @cupping.shop %></small><br>
+  <small class="text-muted"><%= @cupping.memo %></small><br>
+</h3>
 
+<h5><%= @cupping.flavor_coment%></h5>
 
 

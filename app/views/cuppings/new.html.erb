@@ -1,20 +1,26 @@
-<h1>Cuppings#new</h1>
+<h1>NEW CUPPING</h1>
+<div class="container"> 
+ <%= form_for(@cupping) do |f| %>
+  <fieldset>
+    <div class="form-group">
+    	 <%= f.text_field :origin, class: 'form-control', placeholder: 'ORIGIN'%>
+    </div>
 
-<%= form_for(@cupping) do |f| %>
 
-  <%= f.label :origin, "ORIGIN" %><br>
-  <%= f.text_field :origin %><br>
+	<div class="form-group">
+    	 <%= f.text_field :process, class: 'form-control', placeholder: 'PROCESS'%>
+    </div>
 
-  <%= f.label :process, "PROCESS" %><br>
-  <%= f.text_field :process %><br>
 
-  <%= f.label :shop, "SHOP" %><br>
-  <%= f.text_field :shop %><br>
+	<div class="form-group">
+    	 <%= f.text_field :shop, class: 'form-control', placeholder: 'SHOP'%>
+    </div>
 
-  <%= f.label :memo, "MEMO" %><br>
-  <%= f.text_field :memo %><br>
+    <div class="form-group">
+    	<%= f.text_field :memo, class:  'form-control',  placeholder: 'MEMO'%>
+    </div>
 
-  <br><br>
+    <p class="lead">CLEAN CUP</p>
   <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
   <script>
   var slider = new Slider('#ex1', {
@@ -24,11 +30,17 @@
   });
   </script>
 
+    <div class="form-group">
+    	<%= f.text_field :flavor_coment, class:  'form-control',  placeholder: 'COMENT' %>
+    </div>
+    <%= f.submit class: 'btn btn-primary' %>
+    <font style="vertical-align: inherit;"></font>
+    <% end %>
 
 
-  <br><%= f.label :flavor_coment, "COMENT" %><br>
-  <%= f.text_field :flavor_coment %><br>
-  <%= f.submit %>
 
-<% end %>
+
+
+
+
 
