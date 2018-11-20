@@ -29,6 +29,11 @@ class CuppingsController < ApplicationController
     redirect_to @cupping
   end
 
+  def index
+    @cuppings = Cupping.all
+
+  end
+
    private
     def cupping_params
       params.require(:cupping).permit(:memo, :process, :shop, :origin, :flavor_coment)

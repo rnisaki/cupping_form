@@ -1,5 +1,7 @@
-<h1>SAMPLE<%= @cupping.id%></h1>
+
 <div class="container"> 
+
+<h1>SAMPLE<%= @cupping.id%></h1>
  <%= form_for(@cupping) do |f| %>
   <fieldset>
     <div class="form-group">
@@ -21,11 +23,10 @@
 
     <div class="form-group">
       <label >MEMO</label>
-      <%= f.text_field :memo, class:  'form-control',  placeholder: 'MEMO'%>
-    </div>
+      <%= f.text_area :memo, class:  'form-control',  placeholder: 'MEMO', rows: "5"%>    </div>
 
     <p class="lead">CLEAN CUP</p>
-  <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+  <input class="d-inline" id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="8" data-slider-step="1" data-slider-value="0"/>
   <script>
   var slider = new Slider('#ex1', {
   formatter: function(value) {
@@ -36,9 +37,9 @@
 
     <div class="form-group">
       <label >COMENT</label>
-      <%= f.text_field :flavor_coment, class:  'form-control',  placeholder: 'COMENT' %>
+      <%= f.text_area :flavor_coment, class:  'form-control',  placeholder: 'COMENT',rows: "5"%>
     </div>
-    <%= f.submit class: 'btn btn-primary' %>
+    <%= f.submit class: 'btn btn-primary'%>
     <font style="vertical-align: inherit;"></font>
     <% end %>
 
