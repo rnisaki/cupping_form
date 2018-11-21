@@ -1,7 +1,36 @@
-<%= @cuppings.each do |cupping| %>
-<%= cupping.origin %><br>
-<%= cupping.process %><br>
-<%= cupping.shop %><br>
-<%= cupping.memo %><br>
-<%= cupping.flavor_coment %><br><hr>
+<% @cuppings.each do |cupping| %>
+  <%= cupping.origin %><br>
+  <%= cupping.process %><br>
+  <%= cupping.shop %><br>
+  <%= cupping.memo %><br>
+  <%= cupping.flavor_coment %><br><hr>
 <% end %>
+<br>
+<br>
+
+<!-- コントローラーでやってることをビューで再現しました -->
+
+
+<!-- 自分のつくった全てのcuppingをクッキーから取り出し、そのcuppingのid番号を入れる配列を作る  -->
+<% array = [] %>
+
+<!-- とりあえず全てのクッキーを回す  -->
+<% cookies.each do |cookie| %>
+
+  <!-- cokkieのキーがcupping_から始まるもの && 無駄にヒットしてしまったものを正規表現で削除 --> 
+  <% if cookie[0] =~ /cupping_/ && cookie[0] !~ /cupping_form_session/ %>
+
+    <!-- cupping_**の**からcupping_idを取得&配列に入れ、あとでわかるようにする -->
+    <% array << cookie[0].scan(/cupping_(.+)/)[0] %>
+
+  <% end %>
+<% end %>
+
+<!-- 自分のつくった全てのcuppingをid番号で表示(配列) (inspectは中身を見るメソッドです) -->
+<%#= array.inspect %><!-- flattenの使用を比較するために追加しました(使わなくて大丈夫です) -->  
+
+<!-- 今の時点で"array"は2次元配列(例:[["15"], ["16"], ["17"], ["19"]])になっているので、扱いやすいよう1次元(例:["15","16","17","19"])にする  -->
+<% array.flatten! %><!-- (flattenは次元を下げるメソッドです) -->
+
+<!--  自分のつくった全てのcuppingをid番号で表示(配列) (inspectは中身を見るメソッドです) -->
+<%= array.inspect %>
