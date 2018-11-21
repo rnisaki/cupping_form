@@ -1,7 +1,6 @@
 
 <div class="container">
-<h1>NEW CUPPING</h1>
-<div class="container"> 
+ <h1>NEW CUPPING</h1>
  <%= form_for(@cupping) do |f| %>
   <fieldset>
     <div class="form-group">
@@ -23,9 +22,10 @@
     </div>
 
 
+ <div class ="clean_cup">
+  <p class="lead">CLEAN CUP</p>
+   <input  class="d-inline resize" id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="8" data-slider-step="1" data-slider-value="0"/>
 
- <p class="lead">CLEAN CUP</p>
-     <input  class="d-inline" id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="8" data-slider-step="1" data-slider-value="0"/>
    <script>
     var slider = new Slider('#ex1', {
      formatter: function(value) {
@@ -33,17 +33,108 @@
   		}
   		});
    </script>
+ </div>
+
+ <div class="sweet">
+  <p class="lead">SWEET</p>
+   <input  class="d-inline resize" id="ex2" data-slider-id='ex2Slider' type="text" data-slider-min="0" data-slider-max="8" data-slider-step="1" data-slider-value="0"/>
+
+   <script>
+    var slider = new Slider('#ex2', {
+     formatter: function(value) {
+     return 'Current value: ' + value;
+  		}
+  		});
+   </script>
+ </div>
+
+ <div class="acidity">
+  <p class="lead">ACIDITY</p>
+   <input  class="d-inline resize" id="ex3" data-slider-id='ex3Slider' type="text" data-slider-min="0" data-slider-max="8" data-slider-step="1" data-slider-value="0"/>
+
+   <script>
+    var slider = new Slider('#ex3', {
+     formatter: function(value) {
+     return 'Current value: ' + value;
+  		}
+  		});
+   </script>
+ </div>
+
+ <div class="mouth_feel">
+  <p class="lead">MOUTH FEEL</p>
+   <input  class="d-inline resize" id="ex4" data-slider-id='ex4Slider' type="text" data-slider-min="0" data-slider-max="8" data-slider-step="1" data-slider-value="0"/>
+
+   <script>
+    var slider = new Slider('#ex4', {
+     formatter: function(value) {
+     return 'Current value: ' + value;
+  		}
+  		});
+   </script>
+ </div>
+
+ <div class="flavor">
+  <p class="lead">FLAVOR</p>
+   <input  class="d-inline resize" id="ex5" data-slider-id='ex5Slider' type="text" data-slider-min="0" data-slider-max="8" data-slider-step="1" data-slider-value="0"/>
+
+   <script>
+    var slider = new Slider('#ex5', {
+     formatter: function(value) {
+     return 'Current value: ' + value;
+  		}
+  		});
+   </script>
+ </div>
+
+ <div class="after_taste">
+  <p class="lead">AFTER TASTE</p>
+   <input  class="d-inline resize" id="ex6" data-slider-id='ex6Slider' type="text" data-slider-min="0" data-slider-max="8" data-slider-step="1" data-slider-value="0"/>
+
+   <script>
+    var slider = new Slider('#ex6', {
+     formatter: function(value) {
+     return 'Current value: ' + value;
+  		}
+  		});
+   </script>
+ </div>
+
+ <div class="balance">
+  <p class="lead">BALANCE</p>
+   <input  class="d-inline resize" id="ex7" data-slider-id='ex7Slider' type="text" data-slider-min="0" data-slider-max="8" data-slider-step="1" data-slider-value="0"/>
+
+   <script>
+    var slider = new Slider('#ex7', {
+     formatter: function(value) {
+     return 'Current value: ' + value;
+  		}
+  		});
+   </script>
+ </div>
+
+ <div class="over_all">
+  <p class="lead">OVER ALL</p>
+   <input  class="d-inline resize" id="ex8" data-slider-id='ex8Slider' type="text" data-slider-min="0" data-slider-max="8" data-slider-step="1" data-slider-value="0"/>
+
+   <script>
+    var slider = new Slider('#ex8', {
+     formatter: function(value) {
+     return 'Current value: ' + value;
+  		}
+  		});
+   </script>
+ </div>
 
 
-
-    <div class="form-group">
-    	<%= f.text_area :flavor_coment, class:  'form-control',  placeholder: 'COMENT',rows: "5"%>
-    </div>
-    <%= f.submit class: 'btn btn-primary', data: { disable_with: "SAVE" } %>
+ <div class="form-group">
+   <%= f.text_area :flavor_coment, class:  'form-control',  placeholder: 'COMENT',rows: "5"%>
+ </div>
+   <%= f.submit class: 'btn btn-primary', data: { disable_with: "SAVE" } %>
     <font style="vertical-align: inherit;"></font>
-    <% end %>
+   <% end %>
 
-</fieldset>
+  </fieldset>
 </div>
 
 
