@@ -4,8 +4,6 @@ class CuppingsController < ApplicationController
   end
 
   def create
-  	
-
   	@cupping = Cupping.new(cupping_params)
   	if @cupping.save
       #クッキーの作成

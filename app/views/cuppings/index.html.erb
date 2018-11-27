@@ -1,12 +1,24 @@
+
+
+
+
+<div class="container">
+<table class="table table-hover">
 <% @cuppings.each do |cupping| %>
-  <%= cupping.origin %><br>
-  <%= cupping.process %><br>
-  <%= cupping.shop %><br>
-  <%= cupping.memo %><br>
-  <%= cupping.flavor_coment %><br><hr>
+  <tbody>
+<tr>
+      <th scope="row"><%= cupping.created_at %></th>
+      <td>COUNTRY</td>
+      <td><%= cupping.origin %>/<%= cupping.process %></td>
+      <td><%= cupping.shop %></td>
+      </tr>
 <% end %>
 <br>
 <br>
+</tbody>
+</table>
+</div>
+
 
 <!-- コントローラーでやってることをビューで再現しました -->
 
