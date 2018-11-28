@@ -3,6 +3,18 @@
  <h1>NEW CUPPING</h1>
  <%= form_for(@cupping) do |f| %>
   <fieldset>
+
+
+
+
+    <div class="form-group">
+      <%= f.select :country, @countries.map{|c| [c.name, c.id]} %>
+    </div>
+
+
+
+
+
     <div class="form-group">
     	 <%= f.text_field :origin, class: 'form-control', placeholder: 'ORIGIN'%>
     </div>
@@ -25,18 +37,26 @@
 
 
 
+
   <div class="form-group">
   <p class="lead">SWEET</p>
-  <text id="sweet_point">0</text>
-  <%= f.range_field :sweet_point, :min=>0, :max=>8, :class=>"slide",
-                    :value=>0, :id=>"sweet_point_slider" %>
+  <text id="sweet">0</text>
+  <%= f.range_field :sweet, :min=>0, :max=>8, :class=>"slide",
+                    :value=>0, :id=>"sweet_slider" %>
    <script >
-    $("#sweet_point_slider").change(function () {                    
-   var newValue = $('#sweet_point_slider').val();
-   $("#sweet_point").html(newValue);
+    $("#sweet_slider").change(function () {                    
+   var newValue = $('#sweet_slider').val();
+   $("#sweet").html(newValue);
     });
    </script>
  </div>
+
+
+
+
+
+
+
 
 
 

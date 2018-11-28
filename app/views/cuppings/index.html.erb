@@ -3,20 +3,22 @@
 
 
 <div class="container">
-<table class="table table-hover">
-<% @cuppings.each do |cupping| %>
-  <tbody>
-<tr>
-      <th scope="row"><%= cupping.created_at %></th>
-      <td>COUNTRY</td>
-      <td><%= cupping.origin %>/<%= cupping.process %></td>
-      <td><%= cupping.shop %></td>
-      </tr>
-<% end %>
-<br>
-<br>
-</tbody>
-</table>
+
+  
+ <table class="table table-hover">
+  <% @cuppings.each do |cupping| %>
+    <tbody>
+    <tr onclick='window.location="<%= '/cuppings/'+ cupping.id.to_s %>"'>
+       <th scope="row"><%= cupping.created_at %></th>
+       <td>COUNTRY</td>
+       <td><%= cupping.origin %>/<%= cupping.process %></td>
+       <td><%= cupping.shop %></td>
+    </tr>
+  <% end %>
+   <br>
+   <br>
+   </tbody>
+ </table>
 </div>
 
 
@@ -45,4 +47,4 @@
 <% array.flatten! %><!-- (flattenは次元を下げるメソッドです) -->
 
 <!--  自分のつくった全てのcuppingをid番号で表示(配列) (inspectは中身を見るメソッドです) -->
-<%= array.inspect %>
+<%#=array.inspect %>

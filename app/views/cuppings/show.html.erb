@@ -6,7 +6,12 @@
 
 
 <h3>
-  country / <%= @cupping.origin %><br>
+  <%= @cupping.origin %><br>
+
+   <%= @cupping.country.name %><br>
+   <%= Country.find(@cupping.coutry_id) .name %><br>
+   
+   
   <small class="text-muted"><%= @cupping.process %></small><br>
   <small class="text-muted"><%= @cupping.shop %></small><br>
   <small class="text-muted"><%= @cupping.memo %></small><br>
@@ -14,4 +19,9 @@
 
 <h5><%= @cupping.flavor_coment%></h5>
 
+
+
+
 </div>
+
+

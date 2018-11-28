@@ -1,10 +1,16 @@
 class CuppingsController < ApplicationController
   def new
   	@cupping = Cupping.new
+    @countries = Country.all
+
   end
 
   def create
+ puts "----------------------------"
+    puts params
+    puts "----------------------------"
   	@cupping = Cupping.new(cupping_params)
+
   	if @cupping.save
       #クッキーの作成
       cookies["cupping_" + @cupping.id.to_s] = "1" 
@@ -58,6 +64,6 @@ class CuppingsController < ApplicationController
 
    private
     def cupping_params
-      params.require(:cupping).permit(:memo, :process, :shop, :origin, :flavor_coment)
+      params.require(:cupping).permit(:memo, :process, :shop, :origin, :flavor_coment, :country_id, :sweet)
     end
 end
