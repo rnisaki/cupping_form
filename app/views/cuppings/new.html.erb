@@ -20,21 +20,25 @@
     <div class="form-group">
     	<%= f.text_area :memo, class:  'form-control',  placeholder: 'MEMO', rows: "5"%>
     </div>
-<div class="container">
+
+
+
+
 
   <div class="form-group">
   <p class="lead">SWEET</p>
   <text id="sweet_point">0</text>
-  <%= f.range_field :sweet_point, :min=>0, :max=>8, :class=>"slide", :id=>"sweet_point_slider"%>
+  <%= f.range_field :sweet_point, :min=>0, :max=>8, :class=>"slide",
+                    :value=>0, :id=>"sweet_point_slider" %>
    <script >
     $("#sweet_point_slider").change(function () {                    
    var newValue = $('#sweet_point_slider').val();
    $("#sweet_point").html(newValue);
-});
+    });
    </script>
  </div>
 
-</div>
+
 
 
  
