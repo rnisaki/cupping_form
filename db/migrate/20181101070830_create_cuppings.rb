@@ -14,14 +14,6 @@ class CreateCuppings < ActiveRecord::Migration[5.2]
       t.string :process
       t.string :shop
       t.text :memo
-      t.integer :crean_cup_point
-      t.integer :sweet_point
-      t.integer :acidity_point
-      t.integer :mouth_feel_point
-      t.integer :flavor_point
-      t.integer :after_taste_point
-      t.integer :balance_point
-      t.integer :over_all_point
       t.integer :total_point
       t.integer :country_id 
 

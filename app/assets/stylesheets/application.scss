@@ -50,3 +50,73 @@ footer address{
     letter-spacing: 5px;    /*文字と文字の間隔をあける*/
     font-style: normal; /*文字の斜体を取り消す*/
 }
+
+
+
+/*--------------formgroupe--------------*/
+
+p.lead{
+	
+    float: left;
+    width: 20%;
+    text-align:center;
+}
+
+.form-group{
+    margin-top: 60px;
+
+    text{
+   
+
+    }
+}
+
+
+.flavor-text{
+width:50%;
+margin-left: 70px;
+
+}
+/*----------------------point-counter-----------------------------*/
+.balloon3-left {
+	position: relative;
+	display: inline-block;
+	padding: 0 5px;
+	width: 60px;
+	height: 60px;
+	line-height: 66px;
+	vertical-align: middle;
+	text-align: center;
+	color: #FFF;
+	font-size: 20px;
+	font-weight: bold;
+	background: #1a1a1a;
+	border-radius: 50%;
+	box-sizing: border-box;
+}
+
+.balloon3-left:before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: -25px;
+  	margin-top: -15px;
+	border: 15px solid transparent;
+	border-right: 15px solid #1a1a1a;
+ 	z-index: 0;
+}
+
+.point-counter{
+   float:right;
+	width:30%;
+	 text-align:center;
+	
+}
+
+/*-------------------createbtn----------------------*/
+.create-btn{
+	text-align: center;
+}
+
+
+    
