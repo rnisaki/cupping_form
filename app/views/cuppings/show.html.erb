@@ -1,27 +1,35 @@
 
 <div class="container">
-<h1>SAMPLE<%= @cupping.id %><br>
-  <small class="text-muted"><%= @cupping. created_at%></small>
-</h1>
+　
+  <h1>
+　　<small class="text-muted"><%= @cupping. created_at%></small><br>
+　　<%= @cupping.country.name %> / <%= @cupping.origin %><br>
+　</h1>
 
+　<h3 class = "border_botomm" >PROCESS
+   <small class="text-muted"><%= @cupping.process %></small>
+  </h3><br>
+  <h3 class = "border_botomm" >SHOP
+   <small class="text-muted"><%= @cupping.shop %></small>
+  </h3><br>
+  <h3 class = "border_botomm" >MEMO
+   <small class="text-muted"><%= @cupping.memo %></small>
+  </h3><br>
 
-<h3>
-  <%= @cupping.origin %><br>
+  <input type="range" class="range" >
+ <span id="value"><%= @cupping.sweet %></span>
+  
 
-   <%= @cupping.country.name %><br>
-   <%= Country.find(@cupping.coutry_id) .name %><br>
-   
-   
-  <small class="text-muted"><%= @cupping.process %></small><br>
-  <small class="text-muted"><%= @cupping.shop %></small><br>
-  <small class="text-muted"><%= @cupping.memo %></small><br>
-</h3>
+  <h5><%= @cupping.flavor_coment%></h5>
 
-<h5><%= @cupping.flavor_coment%></h5>
-
-
-
-
+   <a href="<%= @cupping.id %>/edit" class="mylist_btn">
+    <button type="submit" class="btn btn-primary">編集
+    </button>
+   </a>
 </div>
+
+
+
+
 
 
