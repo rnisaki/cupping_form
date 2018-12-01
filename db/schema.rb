@@ -19,20 +19,20 @@ ActiveRecord::Schema.define(version: 2018_11_01_073410) do
   end
 
   create_table "cuppings", force: :cascade do |t|
-    t.integer "crean_cup"
-    t.integer "sweet"
-    t.integer "acidity"
-    t.integer "mouth_feel"
-    t.integer "flavor"
-    t.integer "after_taste"
-    t.integer "balance"
-    t.integer "over_all"
+    t.float "clean_cup"
+    t.float "sweet"
+    t.float "acidity"
+    t.float "mouth_feel"
+    t.float "flavor"
+    t.float "after_taste"
+    t.float "balance"
+    t.float "over_all"
     t.text "flavor_coment"
     t.string "origin"
     t.string "process"
     t.string "shop"
     t.text "memo"
-    t.integer "total_point"
+    t.float "total_point"
     t.integer "country_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

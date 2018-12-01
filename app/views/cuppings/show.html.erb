@@ -2,7 +2,7 @@
 <div class="container">
 　
   <h1>
-　　<small class="text-muted"><%= @cupping. created_at%></small><br>
+　　<small class="text-muted"><%= @cupping.created_at.strftime('%Y/%m/%d') %></small><br>
 　　<%= @cupping.country.name %> / <%= @cupping.origin %><br>
 　</h1>
 
@@ -16,9 +16,91 @@
    <small class="text-muted"><%= @cupping.memo %></small>
   </h3><br>
 
-  <input type="range" class="range" >
- <span id="value"><%= @cupping.sweet %></span>
-  
+
+
+<div class="slider-wrapper">
+  <div class="form-group">
+   <p class="lead">CLEAN CUP</p>
+   <input  type="range" class="range" value="<%= @cupping.clean_cup %>" 
+          min="0" max="8" step="0.5" disabled="true" list="tickmarks">
+          <datalist id="tickmarks">
+           <option value="0" label="0">
+           <option value="1">
+           <option value="2">
+           <option value="3">
+           <option value="4">
+           <option value="5" label="5">
+           <option value="6">
+           <option value="7">
+           <option value="8" label="8">
+          </datalist>
+   <div class="point-counter">
+    <span id="value" class="balloon3-left"><%= @cupping.clean_cup %></span><br>
+   </div>
+  </div>
+
+  <div class="form-group">
+   <p class="lead">SWEET</p>
+   <input type="range" class="range" value="<%= @cupping.sweet %>" 
+          min="0" max="8" step="0.5" disabled="true" list="tickmarks" >
+   <div class="point-counter">
+    <span id="value" class="balloon3-left"><%= @cupping.sweet %></span><br>
+   </div>
+  </div>
+
+   <div class="form-group">
+    <p class="lead">ACIDITY</p>
+    <input type="range" class="range" value="<%= @cupping.acidity %>" 
+          min="0" max="8" step="0.5" disabled="true" list="tickmarks" >
+    <div class="point-counter">
+     <span id="value" class="balloon3-left"><%= @cupping.acidity %></span><br>
+    </div>
+   </div>
+
+  <div class="form-group">
+   <p class="lead">MOUTH FEEL</p>
+   <input type="range" class="range" value="<%= @cupping.mouth_feel %>" 
+          min="0" max="8" step="0.5" disabled="true" list="tickmarks"  >
+   <div class="point-counter">
+    <span id="value" class="balloon3-left"><%= @cupping.mouth_feel %></span><br>
+   </div>
+  </div>
+
+  <div class="form-group">
+   <p class="lead">FLAVOR</p>
+   <input type="range" class="range" value="<%= @cupping.flavor %>" 
+          min="0" max="8" step="0.5" disabled="true" list="tickmarks"  >
+   <div class="point-counter">
+    <span id="value" class="balloon3-left"><%= @cupping.flavor %></span><br>
+   </div>
+  </div>
+
+  <div class="form-group">
+   <p class="lead">AFTER TASTE</p>
+   <input type="range" class="range" value="<%= @cupping.after_taste %>" 
+          min="0" max="8" step="0.5" disabled="true" list="tickmarks"  >
+   <div class="point-counter">
+    <span id="value" class="balloon3-left"><%= @cupping.after_taste %></span><br>
+   </div>
+  </div>
+
+  <div class="form-group">
+   <p class="lead">BALANCE</p>
+   <input type="range" class="range" value="<%= @cupping.balance %>" 
+          min="0" max="8" step="0.5" disabled="true" list="tickmarks"  >
+   <div class="point-counter">
+    <span id="value" class="balloon3-left"><%= @cupping.balance %></span><br>
+   </div>
+  </div>
+
+  <div class="form-group">
+   <p class="lead">OVER ALL</p>
+   <input type="range" class="range" value="<%= @cupping.over_all %>" 
+          min="0" max="8" step="0.5" disabled="true" list="tickmarks"  >
+   <div class="point-counter">
+    <span id="value" class="balloon3-left"><%= @cupping.over_all %></span><br>
+   </div>
+  </div>
 
   <h5><%= @cupping.flavor_coment%></h5>
 

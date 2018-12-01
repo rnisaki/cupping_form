@@ -6,7 +6,7 @@ class CuppingsController < ApplicationController
   end
 
   def create
- puts "----------------------------"
+   puts "----------------------------"
     puts params
     puts "----------------------------"
   	@cupping = Cupping.new(cupping_params)
@@ -29,6 +29,7 @@ class CuppingsController < ApplicationController
 
   def edit
     @cupping = Cupping.find(params[:id])
+    @countries = Country.all
   end
 
   def update
@@ -64,6 +65,6 @@ class CuppingsController < ApplicationController
 
    private
     def cupping_params
-      params.require(:cupping).permit(:memo, :process, :shop, :origin, :flavor_coment, :country_id, :sweet)
+      params.require(:cupping).permit(:memo, :process, :shop, :origin, :flavor_coment, :country_id, :sweet, :clean_cup, :acidity, :mouth_feel, :flavor, :after_taste, :balance, :over_all, :total)
     end
 end

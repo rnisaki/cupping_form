@@ -9,8 +9,8 @@
   <% @cuppings.each do |cupping| %>
     <tbody>
     <tr onclick='window.location="<%= '/cuppings/'+ cupping.id.to_s %>"'>
-       <th scope="row"><%= cupping.created_at %></th>
-       <td>COUNTRY</td>
+       <th scope="row"><%= cupping.created_at.strftime('%Y/%m/%d') %></th>
+       <td><%=cupping.country.name %></td>
        <td><%= cupping.origin %>/<%= cupping.process %></td>
        <td><%= cupping.shop %></td>
     </tr>
