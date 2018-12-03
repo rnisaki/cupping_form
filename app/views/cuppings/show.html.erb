@@ -1,21 +1,13 @@
 
 <div class="container">
-　
-  <h1>
-　　<small class="text-muted"><%= @cupping.created_at.strftime('%Y/%m/%d') %></small><br>
-　　<%= @cupping.country.name %> / <%= @cupping.origin %><br>
-　</h1>
-
-　<h3 class = "border_botomm" >PROCESS
-   <small class="text-muted"><%= @cupping.process %></small>
-  </h3><br>
-  <h3 class = "border_botomm" >SHOP
-   <small class="text-muted"><%= @cupping.shop %></small>
-  </h3><br>
-  <h3 class = "border_botomm" >MEMO
-   <small class="text-muted"><%= @cupping.memo %></small>
-  </h3><br>
-
+　<div class="mybox">
+　　<%= @cupping.created_at.strftime('%Y/%m/%d') %></h1><br>
+　　<h1><%= @cupping.country.name %> / <%= @cupping.origin %></h1><br>
+　<h3> - PROCESS - <small class="text-muted"><%= @cupping.process %></small></h3><br>
+  <h3> - SHOP - <small class="text-muted"><%= @cupping.shop %></small></h3><br>
+  <h3> - MEMO - <br>
+   <small class="text-muted"><%= @cupping.memo %></small></h3>
+   </div>
 
 
 <div class="slider-wrapper">
@@ -34,6 +26,7 @@
            <option value="7">
            <option value="8" label="8">
           </datalist>
+          
    <div class="point-counter">
     <span id="value" class="balloon3-left"><%= @cupping.clean_cup %></span><br>
    </div>
@@ -102,12 +95,29 @@
    </div>
   </div>
 
-  <h5><%= @cupping.flavor_coment%></h5>
+  <div class= "flavor-form">
+   <div class="mybox2">
+    <h3> - FLAVOR - </h3>
+    <small class="text-muted"><%= @cupping.flavor_coment%></small>
+   </div>
+  </div>
 
-   <a href="<%= @cupping.id %>/edit" class="mylist_btn">
-    <button type="submit" class="btn btn-primary">編集
+
+
+
+  <div class ="btn-wrapper>">
+    <div class ="edit-btn">
+    <button type="button" class="btn btn-outline-secondary">
+     <%= link_to("編集", "/cuppings/#{@cupping.id}/edit") %>
     </button>
-   </a>
+    </div> 
+
+    <div class ="destroy-btn">
+    <button type="button" class="btn btn-outline-danger">
+     <%= link_to "削除", cupping_path(@cupping.id), method: :delete %>
+    </button>
+    </div>
+  </div>
 </div>
 
 

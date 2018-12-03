@@ -5,7 +5,7 @@
     
    <div class="beens-data">
      <div class="form-group">
-      <label class="form-control" style="width: 464px;">
+      <label class="form-control" style="width: 464px; margin-left: 80px;">
        COUNTRY  
        <%= f.select :country_id, @countries.map{|c| [c.name, c.id]}%>
       </label>
@@ -27,9 +27,9 @@
    <div class="slider-wrapper">
      <div class="form-group">
        <p class="lead">CLEAN CUP</p>
-        <%= f.range_field :clean_cup, :min=>0, :max=>8, :class=>"slide",:value=>0, 
+        <label>0<%= f.range_field :clean_cup, :min=>0, :max=>8, :class=>"slide",:value=>0, 
                           :id=>"clean_cup_slider",:style=>"width: 500px; height: 60px;",
-                          :list=>"tickmarks",:step=>"0.5"%>
+                          :list=>"tickmarks",:step=>"0.5"%>8</label>
        <datalist id="tickmarks">
         <option value="0" label="0%">
         <option value="1">
