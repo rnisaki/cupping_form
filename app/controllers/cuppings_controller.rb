@@ -2,7 +2,6 @@ class CuppingsController < ApplicationController
   def new
   	@cupping = Cupping.new
     @countries = Country.all
-
   end
 
 

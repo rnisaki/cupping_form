@@ -71,9 +71,9 @@ margin-left: 250px;
 }
 
 .flavor-text{
-width:50%;
-
+	width:50%;
     margin-left: 100px;
+    
 
 }
 /*----------------------point-counter-----------------------------*/
@@ -131,6 +131,12 @@ float:right;
 float:right;
 	width:50%;
 }
+
+btn {
+
+
+    display: block;
+}
 /*----------------show 囲み-----------------------*/
 .mybox{
  background: none;
@@ -138,6 +144,8 @@ float:right;
  margin: 10px 200px; /* 外側の余白 */
  padding: 20px; /* 内側の余白 */
  position: relative;
+ word-wrap: break-word;
+
 
 }
 .mybox:after{
@@ -162,7 +170,7 @@ float:right;
     padding :10px;
     width: 410px;
     height: 260px;
-overflow:auto
+    word-wrap: break-word; /*文字の折り返し*/
 
 }
 .mybox2:before {
@@ -176,6 +184,8 @@ overflow:auto
  height: 5px;
  z-index: 1;
 }
+
+
 
 
 

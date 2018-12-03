@@ -1,25 +1,28 @@
 <div class="container">
- <h1>NEW CUPPING</h1>
   <%= form_for(@cupping) do |f| %>
    <fieldset>
     
    <div class="beens-data">
      <div class="form-group">
-      <label class="form-control" style="width: 464px;">
-       COUNTRY  
+      <label>COUNTRY</label>
+      <div class="form-control">
        <%= f.select :country_id, @countries.map{|c| [c.name, c.id]}%>
-      </label>
+      </div>
      </div>
      <div class="form-group">
-       <%= f.text_field :origin, class: 'form-control', placeholder: 'ORIGIN'%>
+      <label>ORIGIN</label>
+      <%= f.text_field :origin, class: 'form-control', placeholder: 'ORIGIN'%>
      </div>
      <div class="form-group">
+       <label>PROCESS</label>
        <%= f.text_field :process, class: 'form-control', placeholder: 'PROCESS'%>
      </div>
      <div class="form-group">
+      <label>SHOP</label>
       <%= f.text_field :shop, class: 'form-control', placeholder: 'SHOP'%>
      </div>
      <div class="form-group">
+      <label>MEMO</label>
       <%= f.text_area :memo, class:  'form-control',  placeholder: 'MEMO', rows: "5"%>
      </div>
    </div>

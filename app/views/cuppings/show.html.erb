@@ -102,19 +102,29 @@
    </div>
   </div>
 
+  <div class = "tortalpoint-wrapper">
+   <div class="point-counter">
+    
+
+
+
+
+   </div>
+  </div>
 
 
 
   <div class ="btn-wrapper>">
     <div class ="edit-btn">
-    <button type="button" class="btn btn-outline-secondary">
-     <%= link_to("編集", "/cuppings/#{@cupping.id}/edit") %>
+    <button type="button" class="btn-outline-secondary">
+     <%= link_to "編集", "/cuppings/#{@cupping.id}/edit" ,class: "btn"%>
     </button>
     </div> 
 
     <div class ="destroy-btn">
-    <button type="button" class="btn btn-outline-danger">
-     <%= link_to "削除", cupping_path(@cupping.id), method: :delete %>
+    <button type="button" class="btn-outline-danger">
+
+     <%= link_to "削除", cupping_path(@cupping.id), method: :delete, class: "btn" %>
     </button>
     </div>
   </div>
