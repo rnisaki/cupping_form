@@ -31,12 +31,12 @@
                           :id=>"clean_cup_slider",:style=>"width: 500px; height: 60px;",
                           :list=>"tickmarks",:step=>"0.5"%>8</label>
        <datalist id="tickmarks">
-        <option value="0" label="0%">
+        <option value="0" >
         <option value="1">
         <option value="2">
         <option value="3">
         <option value="4">
-        <option value="5" label="50%">
+        <option value="5" >
         <option value="6">
         <option value="7">
         <option value="8">
@@ -180,6 +180,21 @@
     <div class="form-group flavor-text" >
      <%= f.text_area :flavor_coment, class:  'form-control',  placeholder: 'COMENT',rows: "8"%>
     </div>
+
+
+
+  
+
+
+
+
+
+
+    <div class="balloon3">
+     TOTALPOINT
+    </div>
+
+
     <div class ="create-btn">
     <%= f.submit class: 'btn btn-primary', data: { disable_with: "SAVE" } %>
       <font style="vertical-align: inherit;"></font>
