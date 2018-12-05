@@ -5,7 +5,7 @@
     
    <div class="beens-data">
      <div class="form-group">
-      <label class="form-control" style="width: 464px; margin-left: 80px;">
+      <label class="form-control" style="width: 464px; display: inline;">
        COUNTRY  
        <%= f.select :country_id, @countries.map{|c| [c.name, c.id]}%>
       </label>
@@ -27,16 +27,16 @@
    <div class="slider-wrapper">
      <div class="form-group">
        <p class="lead">CLEAN CUP</p>
-        <label>0<%= f.range_field :clean_cup, :min=>0, :max=>8, :class=>"slide",:value=>0, 
-                          :id=>"clean_cup_slider",:style=>"width: 500px; height: 60px;",
-                          :list=>"tickmarks",:step=>"0.5"%>8</label>
+        <%= f.range_field :clean_cup, :min=>0, :max=>8, :class=>"slide",:value=>0, 
+                          :id=>"clean_cup_slider",
+                          :list=>"tickmarks",:step=>"0.5"%>
        <datalist id="tickmarks">
         <option value="0" >
         <option value="1">
         <option value="2">
         <option value="3">
         <option value="4">
-        <option value="5" >
+        <option value="5">
         <option value="6">
         <option value="7">
         <option value="8">
@@ -58,7 +58,7 @@
        <p class="lead">SWEET</p>
         <%= f.range_field :sweet, :min=>0, :max=>8, :class=>"slide",
                     :value=>0, :id=>"sweet_slider",:list=>"tickmarks",
-                    :style=>"width: 500px; height: 60px;",:step=>"0.5"%>
+                    :step=>"0.5"%>
        <script >
         $("#sweet_slider").change(function () {                    
           var newValue = $('#sweet_slider').val();
@@ -75,7 +75,7 @@
        <p class="lead">ACIDITY</p>
         <%= f.range_field :acidity, :min=>0, :max=>8, :class=>"slide",
                     :value=>0, :id=>"acidity_slider", :list=>"tickmarks",
-                    :style=>"width: 500px; height: 60px;",:step=>"0.5"%>
+                    :step=>"0.5"%>
        <script >
         $("#acidity_slider").change(function () {                    
           var newValue = $('#acidity_slider').val();
@@ -92,7 +92,7 @@
        <p class="lead">MOUTH FEEL</p>
         <%= f.range_field :mouth_feel, :min=>0, :max=>8, :class=>"slide",
                     :value=>0, :id=>"mouth_feel_slider", :list=>"tickmarks",
-                    :style=>"width: 500px; height: 60px;",:step=>"0.5" %>
+                    :step=>"0.5" %>
        <script >
         $("#mouth_feel_slider").change(function () {                    
           var newValue = $('#mouth_feel_slider').val();
@@ -109,7 +109,7 @@
        <p class="lead">FLAVOR</p>
         <%= f.range_field :flavor, :min=>0, :max=>8, :class=>"slide",
                     :value=>0, :id=>"flavor_slider", :list=>"tickmarks",
-                    :style=>"width: 500px; height: 60px;",:step=>"0.5" %>
+                    :step=>"0.5" %>
        <script >
         $("#flavor_slider").change(function () {                    
           var newValue = $('#flavor_slider').val();
@@ -127,7 +127,7 @@
        <p class="lead" >AFTER TASTE</p>
         <%= f.range_field :after_taste, :min=>0, :max=>8, :class=>"slide",
                     :value=>0, :id=>"after_taste_slider", :list=>"tickmarks",
-                    :style=>"width: 500px; height: 60px;",:step=>"0.5" %>
+                    :step=>"0.5" %>
        <script >
         $("#after_taste_slider").change(function () {                    
           var newValue = $('#after_taste_slider').val();
@@ -145,7 +145,7 @@
        <p class="lead">BALANCE</p>
         <%= f.range_field :balance, :min=>0, :max=>8, :class=>"slide",
                     :value=>0, :id=>"balance_slider", :list=>"tickmarks",
-                    :style=>"width: 500px; height: 60px;",:step=>"0.5" %>
+                    :step=>"0.5" %>
        <script >
         $("#balance_slider").change(function () {                    
           var newValue = $('#balance_slider').val();
@@ -161,7 +161,7 @@
        <p class="lead">OVER ALL</p>
         <%= f.range_field :over_all, :min=>0, :max=>8, :class=>"slide",
                     :value=>0, :id=>"over_all_slider", :list=>"tickmarks",
-                    :style=>"width: 500px; height: 60px;",:step=>"0.5" %>
+                    :step=>"0.5" %>
        <script >
         $("#over_all_slider").change(function () {                    
           var newValue = $('#over_all_slider').val();
@@ -172,6 +172,7 @@
         <text id="over_all" class="balloon3-left">0</text>
        </div>
       </div>
+
    </div>
 
 
@@ -182,17 +183,36 @@
     </div>
 
 
-
-  
-
-
-
-
-
-
-    <div class="balloon3">
+    <div class="balloon3" >
      TOTALPOINT
     </div>
+    <div class="point-counter">
+        <text id="total_point" class="balloon3-left">0</text>
+       </div>
+    <script>
+      $(".slide").change(function (){
+        var sum = 36;
+            sum += Number($('#clean_cup_slider').val());
+            sum += Number($('#sweet_slider').val());
+            sum += Number($('#acidity_slider').val());
+            sum += Number($('#mouth_feel_slider').val());
+            sum += Number($('#flavor_slider').val());
+            sum += Number($('#after_taste_slider').val());
+            sum += Number($('#balance_slider').val());
+            sum += Number($('#over_all_slider').val());
+
+            $("#total_point").html(sum);
+
+      });
+    </script>>
+
+
+
+
+
+
+
+
 
 
     <div class ="create-btn">

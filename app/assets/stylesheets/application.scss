@@ -26,6 +26,8 @@ header {
 	z-index: 9999;
 	}
 
+
+
 /*------------------------------------------------------------*/
 .container {
 text-align: center;
@@ -71,9 +73,9 @@ p.lead{
     margin-top: 60px;
 
 }
-.beens-data{
-width:60%;
-margin-left: 250px;
+.slide{
+ width: 80%; 
+ height: 60px;
 
 }
 
@@ -114,8 +116,7 @@ margin-left: 250px;
 
 .point-counter{
    float:right;
-	width:25%;
-	 text-align:center;
+   text-align:center;
 	
 }
 
@@ -177,7 +178,7 @@ btn {
 .mybox{
  background: none;
  border: 1px solid #1a1a1a;	/* 線の太さ・種類・色 */
- margin: 10px 200px; /* 外側の余白 */
+ margin: 10px 30px; /* 外側の余白 */
  padding: 20px; /* 内側の余白 */
  position: relative;
  word-wrap: break-word;
@@ -220,8 +221,6 @@ btn {
  height: 5px;
  z-index: 1;
 }
-
-
 
 
 

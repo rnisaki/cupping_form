@@ -5,7 +5,7 @@
 <div class="container">
 
   
- <table class="table table-hover">
+ <table class="table table-hover" >
   <% @cuppings.each do |cupping| %>
     <tbody>
     <tr onclick='window.location="<%= '/cuppings/'+ cupping.id.to_s %>"'>
@@ -20,6 +20,8 @@
    </tbody>
  </table>
 </div>
+
+
 
 
 <!-- コントローラーでやってることをビューで再現しました -->

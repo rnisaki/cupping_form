@@ -23,6 +23,7 @@ class CuppingsController < ApplicationController
 
   def show
     @cupping = Cupping.find(params[:id])
+    @total_point = @cupping.clean_cup + @cupping.sweet + @cupping.acidity + @cupping.mouth_feel + @cupping.flavor + @cupping.after_taste + @cupping.balance + @cupping.over_all + 36
   end
 
 
