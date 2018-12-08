@@ -177,15 +177,31 @@
       </div>
    </div>
 
-
-
-
-
-
-
     <div class="form-group flavor-text" >
      <%= f.text_area :flavor_coment, class:  'form-control',  placeholder: 'COMENT',rows: "8"%>
     </div>
+
+    <div class="balloon3" >
+     <text id="total_point" class="balloon3-left">0</text>
+    </div>
+    <script>
+      $(".slide").change(function (){
+        var sum = 36;
+            sum += Number($('#clean_cup_slider').val());
+            sum += Number($('#sweet_slider').val());
+            sum += Number($('#acidity_slider').val());
+            sum += Number($('#mouth_feel_slider').val());
+            sum += Number($('#flavor_slider').val());
+            sum += Number($('#after_taste_slider').val());
+            sum += Number($('#balance_slider').val());
+            sum += Number($('#over_all_slider').val());
+
+            $("#total_point").html(sum);
+
+      });
+    </script>
+
+
     <div class ="create-btn">
     <%= f.submit class: 'btn btn-primary', data: { disable_with: "SAVE" } %>
       <font style="vertical-align: inherit;"></font>

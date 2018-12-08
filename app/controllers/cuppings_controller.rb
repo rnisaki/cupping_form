@@ -31,6 +31,8 @@ class CuppingsController < ApplicationController
   def edit
     @cupping = Cupping.find(params[:id])
     @countries = Country.all
+    @total_point = @cupping.clean_cup + @cupping.sweet + @cupping.acidity + @cupping.mouth_feel + @cupping.flavor + @cupping.after_taste + @cupping.balance + @cupping.over_all + 36
+
   end
 
 

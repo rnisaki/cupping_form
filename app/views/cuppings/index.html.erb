@@ -3,18 +3,26 @@
 
 
 <div class="container">
-
   
  <table class="table table-hover" >
-  <% @cuppings.each do |cupping| %>
+   <thead>
+     <tr>
+      <th scope="col">DATE</th>
+      <th scope="col">COUNTRY</th>
+      <th scope="col">ORIGIN / PROCESS</th>
+      <th scope="col">SHOP</th>
+     </tr>
+   </thead>
+
+   <% @cuppings.each do |cupping| %>
     <tbody>
     <tr onclick='window.location="<%= '/cuppings/'+ cupping.id.to_s %>"'>
        <th scope="row"><%= cupping.created_at.strftime('%Y/%m/%d') %></th>
        <td><%=cupping.country.name.truncate(40)%></td>
-       <td><%= cupping.origin.truncate(40) %>/<%= cupping.process.truncate(20) %></td>
+       <td><%= cupping.origin.truncate(40) %> / <%= cupping.process.truncate(20) %></td>
        <td><%= cupping.shop.truncate(20) %></td>
     </tr>
-  <% end %>
+   <% end %>
    <br>
    <br>
    </tbody>

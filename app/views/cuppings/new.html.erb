@@ -172,22 +172,9 @@
         <text id="over_all" class="balloon3-left">0</text>
        </div>
       </div>
-
    </div>
-
-
-
-
-    <div class="form-group flavor-text" >
-     <%= f.text_area :flavor_coment, class:  'form-control',  placeholder: 'COMENT',rows: "8"%>
-    </div>
-
-
-    <div class="balloon3" >
-     TOTALPOINT
-    </div>
-    <div class="point-counter">
-        <text id="total_point" class="balloon3-left">0</text>
+ <div class="point-counter">
+        <text id="total_point" class="balloon3">0</text>
        </div>
     <script>
       $(".slide").change(function (){
@@ -204,7 +191,15 @@
             $("#total_point").html(sum);
 
       });
-    </script>>
+    </script>
+
+    <div class="form-group flavor-text" >
+     <%= f.text_area :flavor_coment, class:  'form-control',  placeholder: 'COMENT',rows: "8"%>
+    </div>
+
+
+  
+   
 
 
 

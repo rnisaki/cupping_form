@@ -1,7 +1,7 @@
 class CreateCuppings < ActiveRecord::Migration[5.2]
   def change
     create_table :cuppings do |t|
-      t.integer :crean_cup
+      t.integer :clean_cup
       t.integer :sweet
       t.integer :acidity
       t.integer :mouth_feel
