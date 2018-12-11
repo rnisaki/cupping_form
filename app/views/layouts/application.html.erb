@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CuppingForm01</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1, user-scalable=no,minimal-ui">
+       <title>CuppingForm01</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -15,7 +16,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   </head>
 
- <header>
+<header>
   <div class="card border-secondary mb-3">
    <div class="card-header">
    <a href="/" class="new_file_btn">
@@ -27,6 +28,12 @@
    </a>
    </div>
  </div>
+ <% if flash[:notice] %>
+   <div class="flash">
+    <%= flash[:notice] %>
+   </div>
+  <% end %>
+
  </header>
  
 

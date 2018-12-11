@@ -1,29 +1,29 @@
 <div class="container">
   <%= form_for(@cupping) do |f| %>
-   <fieldset>
+  <fieldset>
     
    <div class="beens-data">
      <div class="form-group">
       <label>COUNTRY</label>
       <div class="form-control">
-       <%= f.select :country_id, @countries.map{|c| [c.name, c.id]}%>
+       <%= f.select :country_id, Country.all.map{|c| [c.name, c.id]}%>
       </div>
      </div>
      <div class="form-group">
       <label>ORIGIN</label>
-      <%= f.text_field :origin, class: 'form-control', placeholder: 'ORIGIN'%>
+      <%= f.text_field :origin, class: 'form-control', style: 'text-align: center;'%>
      </div>
      <div class="form-group">
        <label>PROCESS</label>
-       <%= f.text_field :process, class: 'form-control', placeholder: 'PROCESS'%>
+       <%= f.text_field :process, class: 'form-control', style: 'text-align: center;'%>
      </div>
      <div class="form-group">
       <label>SHOP</label>
-      <%= f.text_field :shop, class: 'form-control', placeholder: 'SHOP'%>
+      <%= f.text_field :shop, class: 'form-control', style: 'text-align: center;'%>
      </div>
      <div class="form-group">
       <label>MEMO</label>
-      <%= f.text_area :memo, class:  'form-control',  placeholder: 'MEMO', rows: "5"%>
+      <%= f.text_area :memo, class:  'form-control', rows: "5", style: 'text-align: center;'%>
      </div>
    </div>
 
@@ -177,12 +177,9 @@
       </div>
    </div>
 
-    <div class="form-group flavor-text" >
-     <%= f.text_area :flavor_coment, class:  'form-control',  placeholder: 'COMENT',rows: "8"%>
-    </div>
 
-    <div class="balloon3" >
-     <text id="total_point" class="balloon3-left">0</text>
+　　 <div class="total-box">
+       <text id="total_point">0</text>
     </div>
     <script>
       $(".slide").change(function (){
@@ -195,19 +192,21 @@
             sum += Number($('#after_taste_slider').val());
             sum += Number($('#balance_slider').val());
             sum += Number($('#over_all_slider').val());
-
             $("#total_point").html(sum);
-
       });
     </script>
 
 
-    <div class ="create-btn">
-    <%= f.submit class: 'btn btn-primary', data: { disable_with: "SAVE" } %>
-      <font style="vertical-align: inherit;"></font>
+    <div class="form-group flavor-text" >
+     <%= f.text_area :flavor_coment, class:  'form-control',  placeholder: 'COMENT',rows: "8"%>
     </div>
-    <% end %>
- </fieldset>
+  </fieldset>
+
+　　<div class ="create-btn">
+     <%= f.submit class: 'btn btn-primary', data: { disable_with: "SAVE" } %>
+     <font style="vertical-align: inherit;"></font>
+   </div>
+   <% end %>
 </div>
 
 

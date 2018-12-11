@@ -1,18 +1,17 @@
 
 <div class="container">
-　<div class="mybox">
-    <div><%= @cupping.created_at.strftime("%Y/%m/%d") %></div>
-     <h1><%= @cupping.country.name %> / <%= @cupping.origin %></h1><br>
-       <h3> - PROCESS - <br><small class="text-muted"><%= @cupping.process %></small></h3><br>
-       <h3> - SHOP - <br><small class="text-muted"><%= @cupping.shop %></small></h3><br>
-       <h3> - MEMO - <br>
-         <small class="text-muted"><%= @cupping.memo %></small>
-       </h3>
-  </div>
+　 <div class="mybox">
+     <div><%= @cupping.created_at.strftime("%Y/%m/%d") %></div>
+      <h1><%= @cupping.country.name %> / <%= @cupping.origin %></h1><br>
+        <h3> - PROCESS - <br><small class="text-muted"><%= @cupping.process %></small></h3><br>
+        <h3> - SHOP - <br><small class="text-muted"><%= @cupping.shop %></small></h3><br>
+        <h3> - MEMO - <br>
+          <small class="text-muted"><%= @cupping.memo %></small>
+        </h3>
+   </div>
 
 
-　<div class="slider-container">
-    <div class="slider-wrapper">
+ <div class="slider-wrapper">
     <div class="form-group">
      <p class="lead">CLEAN CUP</p>
        <input  type="range" class="range" value="<%= @cupping.clean_cup %>" 
@@ -32,7 +31,6 @@
        <span id="value" class="balloon3-left"><%= @cupping.clean_cup %></span><br>
      </div>
    </div>
-    </div>
 
 
 
@@ -98,20 +96,22 @@
       <span id="value" class="balloon3-left"><%= @cupping.over_all %></span><br>
      </div>
    </div>
+ </div>
+ 
 
-   <div class= "flavor-form">
-    <div class="mybox2">
-     <h3> - FLAVOR - </h3>
-     <small class="text-muted"><%= @cupping.flavor_coment%></small>
-    </div>
-   </div>
-
-   <div class = "tortalpoint-wrapper">
-     <div class="point-counter">
+  <div class="bottom-wrapper">
+    <div class="total-box">
      <%= @total_point %>
+    </div>
+
+    <div class= "flavor-form">
+     <div class="mybox2">
+      <h3> - FLAVOR - </h3>
+      <small class="text-muted"><%= @cupping.flavor_coment%></small>
      </div>
-   </div>
-</div>
+    </div>
+  </div>
+
 
   <div class ="btn-wrapper>">
     <div class ="edit-btn">
@@ -122,7 +122,6 @@
 
     <div class ="destroy-btn">
     <button type="button" class="btn-outline-danger">
-
      <%= link_to "削除", cupping_path(@cupping.id), method: :delete, data: {:confirm=> "削除します。よろしいですか?"}, class: "btn" %>
     </button>
     </div>

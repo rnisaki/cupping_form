@@ -1,7 +1,7 @@
 class CuppingsController < ApplicationController
   def new
   	@cupping = Cupping.new
-    @countries = Country.all
+    #@countries = Country.all
   end
 
 
@@ -13,7 +13,7 @@ class CuppingsController < ApplicationController
       cookies["cupping_" + @cupping.id.to_s] = "1" 
       #クッキーの表示(ターミナルにでてきます)
       puts cookies["cupping_" + @cupping.id.to_s]
-      redirect_to @cupping, notice: "登録しました。"
+      redirect_to @cupping, notice: "登録しました"
   	else
       render 'new'
     end
@@ -30,17 +30,18 @@ class CuppingsController < ApplicationController
 
   def edit
     @cupping = Cupping.find(params[:id])
-    @countries = Country.all
-    @total_point = @cupping.clean_cup + @cupping.sweet + @cupping.acidity + @cupping.mouth_feel + @cupping.flavor + @cupping.after_taste + @cupping.balance + @cupping.over_all + 36
-
+    #@countries = Country.all
   end
 
 
 
   def update
     @cupping = Cupping.find(params[:id])
-    @cupping.update(cupping_params)
-    redirect_to @cupping
+    if @cupping.update(cupping_params)
+       redirect_to @cupping, notice: "編集できました"
+    else
+      render 'edit'
+    end
   end
 
 

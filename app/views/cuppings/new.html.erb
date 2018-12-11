@@ -7,7 +7,7 @@
      <div class="form-group">
       <label class="form-control" style="width: 464px; display: inline;">
        COUNTRY  
-       <%= f.select :country_id, @countries.map{|c| [c.name, c.id]}%>
+       <%= f.select :country_id, Country.all.map{|c| [c.name, c.id]}%>
       </label>
      </div>
      <div class="form-group">
@@ -173,9 +173,10 @@
        </div>
       </div>
    </div>
- <div class="point-counter">
-        <text id="total_point" class="balloon3">0</text>
-       </div>
+   
+<div class="total-box">
+       <text id="total_point">0</text>
+    </div>
     <script>
       $(".slide").change(function (){
         var sum = 36;
@@ -187,35 +188,20 @@
             sum += Number($('#after_taste_slider').val());
             sum += Number($('#balance_slider').val());
             sum += Number($('#over_all_slider').val());
-
             $("#total_point").html(sum);
-
       });
     </script>
 
     <div class="form-group flavor-text" >
      <%= f.text_area :flavor_coment, class:  'form-control',  placeholder: 'COMENT',rows: "8"%>
     </div>
+ </fieldset>
 
-
-  
-   
-
-
-
-
-
-
-
-
-
-
-    <div class ="create-btn">
+  <div class ="create-btn">
     <%= f.submit class: 'btn btn-primary', data: { disable_with: "SAVE" } %>
       <font style="vertical-align: inherit;"></font>
     </div>
     <% end %>
- </fieldset>
 </div>
 
 
