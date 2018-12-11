@@ -2,7 +2,7 @@
 <html>
   <head>
      <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1, user-scalable=no,minimal-ui">
-       <title>CuppingForm01</title>
+       <title>CuppingForm</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,9 +11,14 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.2.3/bootstrap-slider.min.js">
     </script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.2.3/css/bootstrap-slider.min.css">
     <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <%= favicon_link_tag('/coffee.png') %>
+    <link rel="apple-touch-startup-image" href="/coffee.png">                                                                             
+    <link rel="apple-touch-icon-precomposed" href="/coffee.png" />
   </head>
 
 <header>
@@ -28,12 +33,7 @@
    </a>
    </div>
  </div>
- <% if flash[:notice] %>
-   <div class="flash">
-    <%= flash[:notice] %>
-   </div>
-  <% end %>
-
+<%= render partial: "layouts/flash_messages", flash: flash %>
  </header>
  
 

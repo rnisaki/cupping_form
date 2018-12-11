@@ -1,0 +1,22 @@
+<% flash.each do |message_type, message| %>
+   <% next if message_type == 'timedout' %>
+   <% if message_type == "notice" %>
+     <% message_type = "success" %>
+   <% end %>
+
+  <div class="alert alert-<%= message_type %> alert-dismissible" role="alert" id="alertfadeout" style="position: absolute; width:92%; margin: 12px auto 0 auto; text-align: center; z-index:5;">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <%= message %>
+  </div>
+<% end %>
+
+<script>
+ /* bootstrap alertをx秒後に消す */
+   $(document).ready(function(){
+     $(window).load(function(){
+       window.setTimeout("$('#alertfadeout').fadeOut()", 1500);
+     });
+   });
+</script>

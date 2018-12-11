@@ -49,7 +49,7 @@ class CuppingsController < ApplicationController
   def destroy
     @cupping = Cupping.find(params[:id])
     @cupping.destroy
-    redirect_to("/cuppings")
+    redirect_to("/cuppings",notice: "削除できました")
   end
 
 
