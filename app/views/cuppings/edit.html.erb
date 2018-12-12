@@ -31,7 +31,7 @@
      <div class="form-group">
        <p class="lead">CLEAN CUP</p>
         <%= f.range_field :clean_cup, :min=>0, :max=>8, :class=>"slide",:value=>@cupping.clean_cup, 
-                          :id=>"clean_cup_slider",:style=>"width: 500px; height: 60px;",
+                          :id=>"clean_cup_slider",
                           :list=>"tickmarks",:step=>"0.5"%>
        <datalist id="tickmarks">
         <option value="0" label="0%">
@@ -60,8 +60,8 @@
      <div class="form-group">
        <p class="lead">SWEET</p>
         <%= f.range_field :sweet, :min=>0, :max=>8, :class=>"slide",
-                    :value=>@cupping.sweet, :id=>"sweet_slider",:list=>"tickmarks",
-                    :style=>"width: 500px; height: 60px;",:step=>"0.5"%>
+                    :value=>@cupping.sweet, :id=>"sweet_slider",
+                    :list=>"tickmarks",:step=>"0.5"%>
        <script >
         $("#sweet_slider").change(function () {                    
           var newValue = $('#sweet_slider').val();
@@ -77,8 +77,8 @@
       <div class="form-group">
        <p class="lead">ACIDITY</p>
         <%= f.range_field :acidity, :min=>0, :max=>8, :class=>"slide",
-                    :value=>@cupping.acidity, :id=>"acidity_slider", :list=>"tickmarks",
-                    :style=>"width: 500px; height: 60px;",:step=>"0.5"%>
+                    :value=>@cupping.acidity, :id=>"acidity_slider",
+                    :list=>"tickmarks",:step=>"0.5"%>
        <script >
         $("#acidity_slider").change(function () {                    
           var newValue = $('#acidity_slider').val();
@@ -94,8 +94,7 @@
       <div class="form-group">
        <p class="lead">MOUTH FEEL</p>
         <%= f.range_field :mouth_feel, :min=>0, :max=>8, :class=>"slide",
-                    :value=>@cupping.mouth_feel, :id=>"mouth_feel_slider", :list=>"tickmarks",
-                    :style=>"width: 500px; height: 60px;",:step=>"0.5" %>
+                    :value=>@cupping.mouth_feel, :id=>"mouth_feel_slider", :list=>"tickmarks",:step=>"0.5" %>
        <script >
         $("#mouth_feel_slider").change(function () {                    
           var newValue = $('#mouth_feel_slider').val();
@@ -111,8 +110,7 @@
       <div class="form-group">
        <p class="lead">FLAVOR</p>
         <%= f.range_field :flavor, :min=>0, :max=>8, :class=>"slide",
-                    :value=>@cupping.flavor, :id=>"flavor_slider", :list=>"tickmarks",
-                    :style=>"width: 500px; height: 60px;",:step=>"0.5" %>
+                    :value=>@cupping.flavor, :id=>"flavor_slider", :list=>"tickmarks",:step=>"0.5" %>
        <script >
         $("#flavor_slider").change(function () {                    
           var newValue = $('#flavor_slider').val();
@@ -129,8 +127,7 @@
       <div class="form-group">
        <p class="lead" >AFTER TASTE</p>
         <%= f.range_field :after_taste, :min=>0, :max=>8, :class=>"slide",
-                    :value=>@cupping.after_taste, :id=>"after_taste_slider", :list=>"tickmarks",
-                    :style=>"width: 500px; height: 60px;",:step=>"0.5" %>
+                    :value=>@cupping.after_taste, :id=>"after_taste_slider", :list=>"tickmarks",:step=>"0.5" %>
        <script >
         $("#after_taste_slider").change(function () {                    
           var newValue = $('#after_taste_slider').val();
@@ -147,8 +144,7 @@
       <div class="form-group">
        <p class="lead">BALANCE</p>
         <%= f.range_field :balance, :min=>0, :max=>8, :class=>"slide",
-                    :value=>@cupping.balance, :id=>"balance_slider", :list=>"tickmarks",
-                    :style=>"width: 500px; height: 60px;",:step=>"0.5" %>
+                    :value=>@cupping.balance, :id=>"balance_slider", :list=>"tickmarks",:step=>"0.5" %>
        <script >
         $("#balance_slider").change(function () {                    
           var newValue = $('#balance_slider').val();
@@ -163,8 +159,7 @@
       <div class="form-group">
        <p class="lead">OVER ALL</p>
         <%= f.range_field :over_all, :min=>0, :max=>8, :class=>"slide",
-                    :value=>@cupping.over_all, :id=>"over_all_slider", :list=>"tickmarks",
-                    :style=>"width: 500px; height: 60px;",:step=>"0.5" %>
+                    :value=>@cupping.over_all, :id=>"over_all_slider", :list=>"tickmarks",:step=>"0.5" %>
        <script >
         $("#over_all_slider").change(function () {                    
           var newValue = $('#over_all_slider').val();

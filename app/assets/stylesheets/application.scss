@@ -54,6 +54,7 @@ footer address{
     color: #fff;    /*文字色の指定*/
     letter-spacing: 5px;    /*文字と文字の間隔をあける*/
     font-style: normal; /*文字の斜体を取り消す*/
+    margin:10px 0 10px 0;
 }
 
 body,
@@ -315,7 +316,15 @@ btn {
     height: 50px;
     line-height: 55px;
 }
-  
+
+input.range {
+    width: 60%;
+    height: 60px;
+}
+
+.mybox2{
+	margin:0 0 30px 20px;
+}
 }
 
 

@@ -13,7 +13,7 @@ class CuppingsController < ApplicationController
       cookies["cupping_" + @cupping.id.to_s] = "1" 
       #クッキーの表示(ターミナルにでてきます)
       puts cookies["cupping_" + @cupping.id.to_s]
-      redirect_to @cupping, notice: "登録しました"
+      redirect_to("/cuppings",notice: "登録しました")
   	else
       render 'new'
     end

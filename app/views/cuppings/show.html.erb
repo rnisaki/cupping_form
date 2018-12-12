@@ -3,9 +3,9 @@
 　 <div class="mybox">
      <div><%= @cupping.created_at.strftime("%Y/%m/%d") %></div>
       <h1><%= @cupping.country.name %> / <%= @cupping.origin %></h1><br>
-        <h3> - PROCESS - <br><small class="text-muted"><%= @cupping.process %></small></h3><br>
-        <h3> - SHOP - <br><small class="text-muted"><%= @cupping.shop %></small></h3><br>
-        <h3> - MEMO - <br>
+        <h3> - 生産処理 - <br><small class="text-muted"><%= @cupping.process %></small></h3><br>
+        <h3> - 購入店 - <br><small class="text-muted"><%= @cupping.shop %></small></h3><br>
+        <h3> - メモ - <br>
           <small class="text-muted"><%= @cupping.memo %></small>
         </h3>
    </div>
@@ -106,7 +106,7 @@
 
     <div class= "flavor-form">
      <div class="mybox2">
-      <h3> - COMMENT - </h3>
+      <h3> COMMENT</h3>
       <small class="text-muted"><%= @cupping.flavor_coment%></small>
      </div>
     </div>
