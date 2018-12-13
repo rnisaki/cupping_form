@@ -54,7 +54,6 @@ class CuppingsController < ApplicationController
 
 
   def index
-
     #自分のつくった全てのcuppingをクッキーから取り出し、そのcuppingのid番号を入れる配列を作る
     array = []
 
@@ -68,6 +67,7 @@ class CuppingsController < ApplicationController
         array << cookie[0].scan(/cupping_(.+)/)[0]
 
       end
+    
     end
 
     #今の時点で"array"は2次元配列(例:[["15"], ["16"], ["17"], ["19"]])になっているので、扱いやすいよう1次元(例:["15","16","17","19"])にする

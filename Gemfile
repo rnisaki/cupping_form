@@ -9,6 +9,8 @@ gem 'rails', '~> 5.2.1'
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
 gem 'jquery-rails'
+gem 'ransack'
+
 
 # Use sqlite3 as the database for Active Record
 # Use Puma as the app server
