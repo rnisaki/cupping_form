@@ -1,26 +1,26 @@
 <div class="container">
- <h1>CUPPING FORM</h1>
+ <h1 style="margin: 40px 0 0 0 ;">CUPPING FORM</h1>
   <%= form_for(@cupping) do |f| %>
    <fieldset>
     
    <div class="beens-data">
      <div class="form-group">
       <label class="form-control">
-       COUNTRY  
+       国名 
        <%= f.select :country_id, Country.all.map{|c| [c.name, c.id]}%>
       </label>
      </div>
      <div class="form-group">
-     	 <%= f.text_field :origin, class: 'form-control', placeholder: 'ORIGIN'%>
+     	 <%= f.text_field :origin, class: 'form-control', placeholder: 'ORIGIN -生産地-'%>
      </div>
      <div class="form-group">
-     	 <%= f.text_field :process, class: 'form-control', placeholder: 'PROCESS'%>
+     	 <%= f.text_field :process, class: 'form-control', placeholder: 'PROCESS -生産処理-'%>
      </div>
      <div class="form-group">
-      <%= f.text_field :shop, class: 'form-control', placeholder: 'SHOP'%>
+      <%= f.text_field :shop, class: 'form-control', placeholder: 'SHOP -店名-'%>
      </div>
      <div class="form-group">
-    	<%= f.text_area :memo, class:  'form-control',  placeholder: 'MEMO', rows: "5"%>
+    	<%= f.text_area :memo, class:  'form-control',  placeholder: 'MEMO -エイジング、焙煎度合い..etc-', rows: "5"%>
      </div>
    </div>
 
@@ -193,7 +193,7 @@
     </script>
 
     <div class="form-group flavor-text" >
-     <%= f.text_area :flavor_coment, class:  'form-control',  placeholder: 'COMENT',rows: "8"%>
+     <%= f.text_area :flavor_coment, class:  'form-control',  placeholder: 'FLAVOR COMMENT',rows: "8"%>
     </div>
  </fieldset>
 
