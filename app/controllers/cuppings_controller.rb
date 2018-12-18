@@ -54,9 +54,6 @@ class CuppingsController < ApplicationController
 
 
   def index
-    @q = Cupping.ransack(params[:q])
-    cuppings = @q.result(distinct: true)
-
     #自分のつくった全てのcuppingをクッキーから取り出し、そのcuppingのid番号を入れる配列を作る
     array = []
 
