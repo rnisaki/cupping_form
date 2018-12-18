@@ -54,6 +54,7 @@ class CuppingsController < ApplicationController
 
 
   def index
+
     #自分のつくった全てのcuppingをクッキーから取り出し、そのcuppingのid番号を入れる配列を作る
     array = []
 
@@ -74,8 +75,8 @@ class CuppingsController < ApplicationController
     array.flatten! #(flattenは次元を下げるメソッドです)
 
     #whereのid検索で配列を使用して複数検索&新しいものが上に並ぶよう、orderとcreated_at DESCで降順ソート
-    @cuppings = Cupping.where(id: array).order("created_at DESC")
-
+    @q = Cupping.where(id: array).order("created_at DESC").ransack(params[:q])
+    @cuppings = @q.result(distinct: true)
   end
 
    private

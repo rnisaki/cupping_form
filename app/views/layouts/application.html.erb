@@ -40,30 +40,7 @@
 
 
 
-  <body>
-<div class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-       <%= link_to 'Cuppings', root_path, class: 'navbar-brand' %>
-    </div>
-    <%= search_form_for @q, html: { class: 'navbar-form navbar-left' } do |f| %>
-      <div class="form-group">
-        <%= f.search_field :shop_cont, class: 'form-control', placeholder: 'shop' %>
-      </div>
-      <div class="form-group">
-        <%= f.search_field :country_cont, class: 'form-control', placeholder: 'country' %>
-      </div>
-      <%= f.submit class: 'btn btn-default' %>
-    <% end %>
-  </div>
-</div>
-
-
-
-
-
-
-
+<body>
     <div id="wrapper">
      <%= yield %>
    </div>
