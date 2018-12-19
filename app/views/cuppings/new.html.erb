@@ -1,5 +1,9 @@
+<header>
+   <h1 style="margin: 10px 0; text-align: center;">CUPPING FORM</h1>
+</header>
+
 <div class="container">
- <h1 style="margin: 40px 0 0 0 ;">CUPPING FORM</h1>
+
   <%= form_for(@cupping) do |f| %>
    <fieldset>
     
@@ -86,7 +90,6 @@
           var newValue = $('#acidity_slider').val();
                   $("#acidity").html(newValue);
         }
-        
        </script>
        <div class="point-counter">
         <text id="acidity" class="balloon3-left">0</text>

@@ -45,10 +45,11 @@
         <option value="8">
        </datalist>                      
        <script >
-         $("#clean_cup_slider").change(function () {                    
-           var newValue = $('#clean_cup_slider').val();
-         $("#clean_cup").html(newValue);
-           });
+         var slider = document.getElementById("clean_cup_slider");
+        slider.oninput = function() {
+          var newValue = $('#clean_cup_slider').val();
+                  $("#clean_cup").html(newValue);
+        }
        </script>
       <div class="point-counter">
         <text id="clean_cup" class="balloon3-left" ><%=@cupping.clean_cup%></text>
@@ -63,10 +64,11 @@
                     :value=>@cupping.sweet, :id=>"sweet_slider",
                     :list=>"tickmarks",:step=>"0.5"%>
        <script >
-        $("#sweet_slider").change(function () {                    
+        var slider = document.getElementById("sweet_slider");
+        slider.oninput = function() {
           var newValue = $('#sweet_slider').val();
-        $("#sweet").html(newValue);
-           });
+                  $("#sweet").html(newValue);
+        }
        </script>
        <div class="point-counter">
         <text id="sweet" class="balloon3-left"><%=@cupping.sweet%></text>
@@ -80,10 +82,11 @@
                     :value=>@cupping.acidity, :id=>"acidity_slider",
                     :list=>"tickmarks",:step=>"0.5"%>
        <script >
-        $("#acidity_slider").change(function () {                    
+        var slider = document.getElementById("acidity_slider");
+        slider.oninput = function() {
           var newValue = $('#acidity_slider').val();
-        $("#acidity").html(newValue);
-           });
+                  $("#acidity").html(newValue);
+        }
        </script>
        <div class="point-counter">
         <text id="acidity" class="balloon3-left"><%=@cupping.acidity%></text>
@@ -96,10 +99,11 @@
         <%= f.range_field :mouth_feel, :min=>0, :max=>8, :class=>"slide",
                     :value=>@cupping.mouth_feel, :id=>"mouth_feel_slider", :list=>"tickmarks",:step=>"0.5" %>
        <script >
-        $("#mouth_feel_slider").change(function () {                    
+        var slider = document.getElementById("mouth_feel_slider");
+        slider.oninput = function() {
           var newValue = $('#mouth_feel_slider').val();
-        $("#mouth_feel").html(newValue);
-           });
+                  $("#mouth_feel").html(newValue);
+        }
        </script>
        <div class="point-counter">
         <text id="mouth_feel" class="balloon3-left"><%=@cupping.mouth_feel%></text>
@@ -112,10 +116,11 @@
         <%= f.range_field :flavor, :min=>0, :max=>8, :class=>"slide",
                     :value=>@cupping.flavor, :id=>"flavor_slider", :list=>"tickmarks",:step=>"0.5" %>
        <script >
-        $("#flavor_slider").change(function () {                    
+        var slider = document.getElementById("flavor_slider");
+        slider.oninput = function() {
           var newValue = $('#flavor_slider').val();
-        $("#flavor").html(newValue);
-           });
+                  $("#flavor").html(newValue);
+        }
        </script>
        <div class="point-counter">
         <text id="flavor" class="balloon3-left"><%=@cupping.flavor%></text>
@@ -129,10 +134,11 @@
         <%= f.range_field :after_taste, :min=>0, :max=>8, :class=>"slide",
                     :value=>@cupping.after_taste, :id=>"after_taste_slider", :list=>"tickmarks",:step=>"0.5" %>
        <script >
-        $("#after_taste_slider").change(function () {                    
+       var slider = document.getElementById("after_taste_slider");
+        slider.oninput = function() {
           var newValue = $('#after_taste_slider').val();
-        $("#after_taste").html(newValue);
-           });
+                  $("#after_taste").html(newValue);
+        }
        </script>
        <div class="point-counter">
         <text id="after_taste" class="balloon3-left"><%=@cupping.after_taste%></text>
@@ -146,10 +152,11 @@
         <%= f.range_field :balance, :min=>0, :max=>8, :class=>"slide",
                     :value=>@cupping.balance, :id=>"balance_slider", :list=>"tickmarks",:step=>"0.5" %>
        <script >
-        $("#balance_slider").change(function () {                    
+        var slider = document.getElementById("balance_slider");
+        slider.oninput = function() {
           var newValue = $('#balance_slider').val();
-        $("#balance").html(newValue);
-           });
+                  $("#balance").html(newValue);
+        }
        </script>
        <div class="point-counter">
         <text id="balance" class="balloon3-left"><%=@cupping.balance%></text>
@@ -161,10 +168,11 @@
         <%= f.range_field :over_all, :min=>0, :max=>8, :class=>"slide",
                     :value=>@cupping.over_all, :id=>"over_all_slider", :list=>"tickmarks",:step=>"0.5" %>
        <script >
-        $("#over_all_slider").change(function () {                    
+        var slider = document.getElementById("over_all_slider");
+        slider.oninput = function() {
           var newValue = $('#over_all_slider').val();
-        $("#over_all").html(newValue);
-           });
+                  $("#over_all").html(newValue);
+        }
        </script>
        <div class="point-counter">
         <text id="over_all" class="balloon3-left"><%=@cupping.over_all%></text>
@@ -198,7 +206,7 @@
   </fieldset>
 
 　　<div class ="create-btn">
-     <%= f.submit class: 'btn btn-primary', data: { disable_with: "SAVE" } %>
+     <%= f.submit "更新", class: 'btn btn-primary', data: { disable_with: "SAVE" } %>
      <font style="vertical-align: inherit;"></font>
    </div>
    <% end %>
