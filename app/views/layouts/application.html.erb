@@ -22,18 +22,30 @@
   </head>
 
 <header>
-  <div class="card border-secondary mb-3" style="margin:0!important;">
+  <div class="card border-secondary mb-3">
    <div class="card-header">
-   <a href="/" class="new_file_btn">
-    <i class="fas fa-plus-circle fa-2x"></i>  
-   </a>
-   <a href="cuppings" class="mylist_btn">
-    <i class="fas fa-coffee fa-2x"></i>
-   </a>
+    <a href="/cuppings" class="mylist_btn">
+     <i class="fas fa-coffee fa-2x"></i>
+    </a>
+
+    <a href="/" class="new_file_btn">
+     <i class="fas fa-plus-circle fa-2x"></i>  
+    </a>
+
+    <div class="header-rogo">
+     <% if controller.controller_name == 'cuppings' && controller.action_name == 'new' %>
+      <h1>新規作成</h1>
+     <% else %>
+      <h1>CUPPING FORM</h1>
+     <% end %>
+    </div>
+
+
+
    </div>
- </div>
-<%= render partial: "layouts/flash_messages", flash: flash %>
- </header>
+  </div>
+ <%= render partial: "layouts/flash_messages", flash: flash %>
+</header>
  
 
 
