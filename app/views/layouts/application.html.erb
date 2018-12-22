@@ -22,7 +22,8 @@
   </head>
 
 <header>
-  <div class="card border-secondary mb-3">
+  <div class="card border-secondary mb-3"
+>
    <div class="card-header">
     <a href="/cuppings" class="mylist_btn">
      <i class="fas fa-coffee fa-2x"></i>
@@ -35,6 +36,8 @@
     <div class="header-rogo">
      <% if controller.controller_name == 'cuppings' && controller.action_name == 'new' %>
       <h1>新規作成</h1>
+     <% elsif controller.controller_name == 'cuppings' && controller.action_name == 'edit' %>
+      <h1>編集</h1>
      <% else %>
       <h1>CUPPING FORM</h1>
      <% end %>

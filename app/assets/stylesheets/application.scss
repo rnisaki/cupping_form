@@ -25,9 +25,21 @@ header {
 	 width: 100%;
 	 z-index: 9999;
 	 height: 60px;
+     text-align: center;
 	}
 
+.mylist_btn{
+    float: left;
+}
 
+.header-rogo{
+display: inline;
+ h1{
+  display: inline;
+
+}
+    
+}
 
 /*------------------------------------------------------------*/
 .container {
@@ -156,12 +168,13 @@ p.lead{
  -webkit-box-shadow:1px 1px 6px 0px #ccc;
  -o-box-shadow:1px 1px 6px 0px #ccc;
  margin: 120px 80px 20px 0px; /* 外側の余白 上下・左右 */
- padding: 50px 90px 20px 90px; /* 内側の余白 上・右・下・左 */
+ padding: 50px 45px 20px 45px; /* 内側の余白 上・右・下・左 */
  position: relative;
  z-index: 0;
  font-size: 30px;
  float:right;
  width:20%;
+
 }
 .total-box:after{
  background-color: #1b1a19; /* マステ部分の色1 */
@@ -274,16 +287,19 @@ btn {
 @media (max-width:670px) {
  .total-box{
     margin: 100px 10px 0 10px;
-    padding-left:40px;
+    padding:25px 20px 10px 20px;
     padding-right:40px;
     width: 112px;
+
+    left: 20px;
+    right: 20px;
+
     }
 
  .total-box:after{
   	padding: 1px 7px;
   	top: -10px;
  	left: -10px;
- 	font-size: 17px;
     }
 
 　　textarea.form-control{

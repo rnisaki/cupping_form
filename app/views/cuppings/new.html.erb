@@ -4,22 +4,26 @@
     
    <div class="beens-data">
      <div class="form-group">
-      <label class="form-control">
-       COUNTRY -国名- 
+      <label>- COUNTRY -</label>
+      <div class="form-control">
        <%= f.select :country_id, Country.all.map{|c| [c.name, c.id]}%>
-      </label>
+      </div>
      </div>
      <div class="form-group">
-     	 <%= f.text_field :origin, class: 'form-control', placeholder: 'ORIGIN -生産地-'%>
+      <label>- ORIGIN -</label>
+      <%= f.text_field :origin, class: 'form-control', style: 'text-align: center;', placeholder: '生産地・農園名'%>
      </div>
      <div class="form-group">
-     	 <%= f.text_field :process, class: 'form-control', placeholder: 'PROCESS -生産処理-'%>
+       <label>- PROCESS -</label>
+       <%= f.text_field :process, class: 'form-control', style: 'text-align: center;', placeholder: '生産処理(ナチュラル・ウォッシュト)'%>
      </div>
      <div class="form-group">
-      <%= f.text_field :shop, class: 'form-control', placeholder: 'SHOP -店名-'%>
+      <label>- SHOP -</label>
+      <%= f.text_field :shop, class: 'form-control', style: 'text-align: center;', placeholder: '購入場所'%>
      </div>
      <div class="form-group">
-    	<%= f.text_area :memo, class:  'form-control',  placeholder: 'MEMO -エイジング、焙煎度合い..etc-', rows: "5"%>
+      <label>- MEMO -</label>
+      <%= f.text_area :memo, class:  'form-control', rows: "5", style: 'text-align: center;', placeholder: 'エイジング、焙煎度合い..etc'%>
      </div>
    </div>
 
