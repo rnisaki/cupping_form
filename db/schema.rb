@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2018_11_01_073410) do
 
   create_table "countries", force: :cascade do |t|
     t.string "name"
+    t.text "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
